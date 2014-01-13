@@ -15,7 +15,7 @@ return array(
         'omitScriptNameInUrls' => true,
         'devMode' => true,
 
-        'enviromentVariables' => array(
+        'environmentVariables' => array(
         	'siteUrl' => 'http://blobs.dev/',
         	'basePath' => '/Users/robertfarrelly/Documents/Dropbox/htdocs/craft/public/'
         )
@@ -25,7 +25,7 @@ return array(
     'new.blaithinennis.com' => array(
         'cooldownDuration' => 0,
 
-          'enviromentVariables' => array(
+          'environmentVariables' => array(
         	'siteUrl' => 'http://new.blaithinennis.com/',
         	'basePath' => '/home/smongey/webapps/blaithinennis/public/'
         )
@@ -35,7 +35,7 @@ return array(
     'blaithinennis.com' => array(
         'cooldownDuration' => 0,
 
-          'enviromentVariables' => array(
+          'environmentVariables' => array(
         	'siteUrl' => 'http://blaithinennis.com/',
         	'basePath' => '/home/smongey/webapps/blaithinennis/public/'
         )
