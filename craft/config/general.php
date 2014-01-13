@@ -10,18 +10,17 @@
 // $_SERVER['SERVER_NAME'] = 'blobs.dev'
 // $_SERVER['SERVER_NAME'] = 'blaithinennis.com'
 
+// this is so you can have multiple options
+
 return array(
     '*' => array(
         'omitScriptNameInUrls' => true,
         'devMode' => true,
-
         'environmentVariables' => array(
         	'siteUrl' => 'http://blobs.dev/',
         	'basePath' => '/Users/robertfarrelly/Documents/Dropbox/htdocs/craft/public/'
         )
-
     ),
-
     'new.blaithinennis.com' => array(
         'cooldownDuration' => 0,
 
@@ -29,9 +28,7 @@ return array(
         	'siteUrl' => 'http://new.blaithinennis.com/',
         	'basePath' => '/home/smongey/webapps/blaithinennis/public/'
         )
-
     ),
-
     'blaithinennis.com' => array(
         'cooldownDuration' => 0,
 
@@ -39,6 +36,6 @@ return array(
         	'siteUrl' => 'http://blaithinennis.com/',
         	'basePath' => '/home/smongey/webapps/blaithinennis/public/'
         )
-
+ 
     )
 );
