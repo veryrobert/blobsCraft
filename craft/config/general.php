@@ -7,6 +7,38 @@
  * You can see a list of the default settings in craft/app/etc/config/defaults/general.php
  */
 
-return array(
+// $_SERVER['SERVER_NAME'] = 'blobs.dev'
+// $_SERVER['SERVER_NAME'] = 'blaithinennis.com'
 
+return array(
+    '*' => array(
+        'omitScriptNameInUrls' => true,
+        'devMode' => true,
+
+        'enviromentVariables' => array(
+        	'siteUrl' => 'http://blobs.dev/',
+        	'basePath' => '/Users/robertfarrelly/Documents/Dropbox/htdocs/craft/public/'
+        )
+
+    ),
+
+    'new.blaithinennis.com' => array(
+        'cooldownDuration' => 0,
+
+          'enviromentVariables' => array(
+        	'siteUrl' => 'http://new.blaithinennis.com/',
+        	'basePath' => '/home/smongey/webapps/blaithinennis/public/'
+        )
+
+    ),
+
+    'blaithinennis.com' => array(
+        'cooldownDuration' => 0,
+
+          'enviromentVariables' => array(
+        	'siteUrl' => 'http://blaithinennis.com/',
+        	'basePath' => '/home/smongey/webapps/blaithinennis/public/'
+        )
+
+    )
 );
