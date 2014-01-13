@@ -7,21 +7,43 @@
  * You can see a list of the default settings in craft/app/etc/config/defaults/db.php
  */
 
+
+
 return array(
 
-	// The database server name or IP address. Usually this is 'localhost' or '127.0.0.1'.
-	'server' => 'localhost',
+	// 'server' => 'localhost',
+	// 'user' => 'root',
+	// 'password' => 'root',
+	// 'database' => 'blobs',
+	// 'tablePrefix' => 'craft',
 
-	// The database username to connect with.
-	'user' => 'root',
+	'*' => array(
 
-	// The database password to connect with.
-	'password' => 'root',
+			'tablePrefix' => 'craft',
+			'server' => 'localhost',
+			'user' => 'root',
+			'password' => 'root',
+			'database' => 'blobs'
 
-	// The name of the database to select.
-	'database' => 'blobs',
+		),
 
-	// The prefix to use when naming tables. This can be no more than 5 characters.
-	'tablePrefix' => 'craft',
+	'new.blaithinennis.com' => array(
+
+			'server' => 'localhost',
+			'user' => 'smngy',
+			'password' => 'blobsDB',
+			'database' => 'blobs'
+
+		),
+
+	'blaithinennis.com' => array(
+
+		'server' => 'localhost',
+		'user' => 'smngy',
+		'password' => 'blobsDB',
+		'database' => 'blobs'
+
+	)
 
 );
+
