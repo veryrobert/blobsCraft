@@ -13,10 +13,10 @@ return array(
 	'server' => 'localhost',
 
 	// The database username to connect with.
-	'user' => 'root',
+	'user' => 'smngy',
 
 	// The database password to connect with.
-	'password' => 'root',
+	'password' => 'blobsDB',
 
 	// The name of the database to select.
 	'database' => 'blobs',
