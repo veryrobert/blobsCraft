@@ -1,0 +1,58 @@
+{% extends "_layout" %}
+
+{% block page %}
+
+			<div class="collections">
+
+			<div id="collections">
+				<div class="left">
+					<h2>{{ entry.title }}</h2>
+
+				</div>
+				<div class="right">
+					
+					<h3>{{ entry.pageIntro }}</h3>
+
+				</div>
+			</div>
+
+
+	{% for collection in craft.entries.find({section: 'singleCollection'}) %}
+
+			<div id="{{ collection.collectionId }}" class="swipe">
+				<div class="swipe-wrap">
+					<div>
+						{% for image in collection.featureImage %}
+						<img src="{{ image.getUrl('collectionImg') }}" alt="">
+						{% endfor %}
+					</div>
+					<div>
+						<div class="text">
+							<div class="left">
+								<h3>{{ collection.title }}</h3>
+							</div>
+							<div class="right">
+								{{ collection.collectionInfo }}
+							</div>
+						</div>
+					</div>
+					
+						{% for image in collection.collectionImages %}
+						<div>
+							<img src="{{ image.getUrl('collectionImg') }}" alt="">
+						</div>
+						{% endfor %}
+				
+				</div>
+				<div class="prev" onclick="{{ collection.collectionId }}.prev()"></div>
+				<div class="next" onclick="{{ collection.collectionId }}.next()"></div>
+			</div>
+
+			
+
+	{% endfor %}
+
+</div>
+
+{% endblock %}
+

@@ -1,0 +1,62 @@
+{% extends "_layout" %}
+
+{% block page %}
+
+	<div class="home">
+			<div id="slider" class="swipe">
+				<div class="swipe-wrap">
+					{% for slide in entry.sliderImages %}			
+						<div>
+							<img src="{{ slide.url }}" alt="">	
+							<div class="slider-text">	
+								{{ slide.sliderCaption }}	
+								{% if slide.sliderLink == true %}
+									<a href="{{ slide.sliderLink }}">Read more</a>
+								{% endif %}
+							</div>
+						</div>
+					{% endfor %}	
+				</div>
+				<div class="prev" onclick="mySwipe.prev()"></div>
+				<div class="next" onclick="mySwipe.next()"></div>
+			</div>
+
+			<div id="about">
+				<div class="left">
+					<h2>About</h2>
+					{% for image in entry.imageThree %}
+						<img src="{{ image.url }}" class="first" alt="">
+					{% endfor %}
+						{% for image in entry.imageTwo %}
+						<img src="{{ image.url }}" class="second" alt="">
+					{% endfor %}
+				</div>
+				<div class="right">
+					<h3>{{ entry.pageIntro }}</h3>
+					{% for image in entry.imageOne %}
+						<img src="{{ image.url }}" class="third" alt="">
+					{% endfor %}
+					<div class="text">
+						{{ entry.body }}
+					</div>
+				</div>
+			</div>
+
+			<div id="contact">
+				{% if entry.contactInfo | length %}
+					<div class="left">
+							<h2>Contact</h2>
+						</div>
+						<div class="right">
+							{% for info in entry.contactInfo %}
+								<div class="text">
+									<p>For information, sales or PR please contact Blaithin at <br><a href=mailto:"{{ link.url }}">{{ info.email }}</a><br><a href="tel:{{ link.url }}">{{ info.phone }}</a></p>
+								</div>
+							{% endfor %}
+						</div>
+				{% endif %}
+			</div>
+			
+	</div>
+
+{% endblock %}

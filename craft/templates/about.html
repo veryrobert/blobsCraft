@@ -1,0 +1,30 @@
+
+{% extends "_layout" %}
+
+{% block page %}
+
+		
+			<div id="about">
+				<div class="left">
+					<h2>About</h2>
+					{% for image in entry.imageThree %}
+						<img src="{{ image.url }}" class="first" alt="">
+					{% endfor %}
+						{% for image in entry.imageTwo %}
+						<img src="{{ image.url }}" class="second" alt="">
+					{% endfor %}
+				</div>
+				<div class="right">
+					<h3>{{ entry.pageIntro }}</h3>
+					{% for image in entry.imageOne %}
+						<img src="{{ image.url }}" class="third" alt="">
+					{% endfor %}
+					<div class="text">
+						{{ entry.body }}
+					</div>
+				</div>
+			</div>
+
+
+
+{% endblock %}

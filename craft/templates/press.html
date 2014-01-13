@@ -1,0 +1,140 @@
+{% extends "_layout" %}
+
+{% block page %}
+
+
+
+		<div class="press">
+
+			<div id="press">
+				<div class="left">
+					<h2>{{ entry.title }}</h2>
+
+				</div>
+				<div class="right">
+					
+					<h3>{{ entry.pageIntro }}</h3>
+
+				</div>
+			</div>
+
+
+			
+			<div id="listing">
+				<div class="four">
+					<h4>Articles</h4>
+					{% for post in craft.entries.find({section: 'publication'}) %}
+					{% if post.sectionCheckbox.contains('articles') %}		
+					<div class="item">
+						<ul>
+							<li>
+								{% for image in post.thumb %}
+								<img src="{{ image.url }}" alt="">
+								{% endfor %}		
+							</li>
+							<li>{{ post.title }}</li>
+							<li><a href="{{ post.articleName }}">{{ post.articleName }}</a></li>
+						</ul>
+						</div>
+						{% endif %}
+					{% endfor %}
+				
+				</div>
+
+				<hr>
+
+				<div class="four">
+					<h4>Publications</h4>
+					{% for post in craft.entries.find({section: 'publication'}) %}
+					{% if post.sectionCheckbox.contains('publications') %}		
+					<div class="item">
+						<ul>
+							<li>
+								{% for image in post.thumb %}
+								<img src="{{ image.url }}" alt="">
+								{% endfor %}		
+							</li>
+							<li>{{ post.title }}</li>
+							<li><a href="{{ post.articleName }}">{{ post.articleName }}</a></li>
+						</ul>
+						</div>
+						{% endif %}
+					{% endfor %}
+				
+				</div>
+
+				<hr>
+
+				<div class="four">
+					<h4>Celebrities</h4>
+					{% for post in craft.entries.find({section: 'publication'}) %}
+					{% if post.sectionCheckbox.contains('celebrities') %}		
+					<div class="item">
+						<ul>
+							<li>
+								{% for image in post.thumb %}
+								<img src="{{ image.url }}" alt="">
+								{% endfor %}		
+							</li>
+							<li>{{ post.title }}</li>
+							<li><a href="{{ post.articleName }}">{{ post.articleName }}</a></li>
+						</ul>
+						</div>
+						{% endif %}
+					{% endfor %}
+				
+				</div>
+
+				<hr>
+
+				<div class="four">
+					<h4>Television</h4>
+					{% for post in craft.entries.find({section: 'publication'}) %}
+					{% if post.sectionCheckbox.contains('television') %}		
+					<div class="item">
+						<ul>
+							<li>
+								{% for image in post.thumb %}
+								<img src="{{ image.url }}" alt="">
+								{% endfor %}		
+							</li>
+							<li>{{ post.title }}</li>
+							<li><a href="{{ post.articleName }}">{{ post.articleName }}</a></li>
+						</ul>
+						</div>
+						{% endif %}
+					{% endfor %}
+				
+				</div>
+
+				<hr>
+
+					<div class="four">
+					<h4>Radio</h4>
+					{% for post in craft.entries.find({section: 'publication'}) %}
+					{% if post.sectionCheckbox.contains('radio') %}		
+					<div class="item">
+						<ul>
+							<li>
+								{% for image in post.thumb %}
+								<img src="{{ image.url }}" alt="">
+								{% endfor %}		
+							</li>
+							<li>{{ post.title }}</li>
+							<li><a href="{{ post.articleName }}">{{ post.articleName }}</a></li>
+						</ul>
+						</div>
+						{% endif %}
+					{% endfor %}
+				
+				</div>
+
+
+
+
+
+			</div>
+		</div>
+			
+
+{% endblock %}

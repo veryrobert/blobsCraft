@@ -1,0 +1,84 @@
+
+{% extends "_layout" %}
+
+{% block page %}
+
+	<div class="product">
+		
+		<div id="product">
+				<div class="left">
+					<ul>
+						<li><a href="#" class="active">All</a></li>
+						<li><a href="#">Topaz</a></li>
+						<li><a href="#">Karelian</a></li>
+					</ul>
+				</div>
+			</div>
+
+			
+
+			<div id="single">
+				<div class="left">
+					<div id='product-single' class="swipe" >
+						<div class='swipe-wrap'>
+						{% for image in entry.productImage %}
+						<div><img src="{{ image.getUrl('productImage') }}" ></div>
+						{% endfor %}
+						</div>
+						<div class="prev" onclick="product.prev()"></div>
+						<div class="next" onclick="product.next()"></div>
+					</div>
+				</div>
+				<div class="right">
+					<h2>{{ entry.collectionName }}</h2>
+					<h3>{{ entry.title }}<br/>&#8364;{{ entry.price }}</h3>
+					
+					{{ entry.productInfo }}
+
+				<p>	<a href="#" 
+                 class="snipcart-add-item buyme"
+                 data-item-max-quantity="5"
+                 data-item-price="{{ entry.price }}"
+                 data-item-id="{{ entry.slug }}"
+                 data-item-name="{{ entry.title }}"
+                 data-item-description="{{ entry.productInfo }}"
+                 data-item-url="{{ url('shop') }}">
+                 Buy Now
+              </a></p>
+
+
+					
+				</div>
+			</div>
+
+
+
+			<div id="listing">
+				<div class="three">
+
+					{% for items in craft.entries.find({section: 'shop'}) %}
+					
+					<div class="item">
+						<a data-pjax href="{{ items.url }}">
+
+							{% for image in items.productThumbnail %}
+							<img src="{{ image.getUrl('shopThumbnail') }}" alt="Product Image">
+							{% endfor %}
+
+						</a>
+						<li>{{ items.title }}</li>
+						<li>{{ items.collectionName }}</li>
+						<li>&#8364;{{ items.price }}</li>
+					</div>
+
+					{% endfor %}
+
+				</div>				
+			</div> 
+
+		</div>
+
+
+
+
+{% endblock %}

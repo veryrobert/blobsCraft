@@ -1,0 +1,31 @@
+{% extends "_layout" %}
+
+{% block page %}
+
+	<div class="contact">
+
+			<div id="contact">
+			
+					<div class="left">
+							<h2>Contact</h2>
+						</div>
+						<div class="right">
+
+							<h3>{{ entry.pageIntro }}</h3>
+
+							{% if entry.contactInfo | length %}
+
+								{% for info in entry.contactInfo %}
+									<div class="text">
+										<p>For more information, sales or PR please contact Blaithin <br><a href=mailto:"{{ link.url }}">{{ info.email }}</a><br><a href="tel:{{ link.url }}">{{ info.phone }}</a></p>
+									</div>
+								{% endfor %}
+
+							{% endif %}
+						</div>
+			
+			</div>
+
+	</div>
+
+{% endblock %}

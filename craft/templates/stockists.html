@@ -1,0 +1,51 @@
+{% extends "_layout" %}
+
+{% block page %}
+
+		<div class="stockists">
+
+			<div id="stockists">
+				<div class="left">
+					<h2>Stockists</h2>
+
+				</div>
+				<div class="right">
+					
+					<h3>Bl&aacute;ith&iacute;n Ennis collections are available to purchase in the following locations throughout Ireland.</h3>
+
+				</div>
+			</div>
+
+
+			<div id="map">
+				
+			</div>
+
+			<div id="listing">
+				<div class="left"></div>
+				<div class="right">
+					
+					{% for stockists in craft.entries.find({section: 'stockists'}) %}
+				
+						<ul>
+							<li class="heading">
+								{{ stockists.title }}	
+							</li>
+					
+							{% if stockists.shop | length %}
+								{% for shop in stockists.shop %}
+
+									<li>{{ shop.shopName }}{{ shop.shopLocation }}</li>
+								{% endfor %}
+							{% endif %}
+						</ul>
+
+					{% endfor %}
+
+				</div>
+			</div>
+
+		</div>
+
+{% endblock %}
+
