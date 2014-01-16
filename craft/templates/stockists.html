@@ -35,7 +35,7 @@
 							{% if stockists.shop | length %}
 								{% for shop in stockists.shop %}
 
-									<li>{{ shop.shopName }}{{ shop.shopLocation }}</li>
+									<li>{{ shop.shopName }}, {{ shop.shopLocation }}</li>
 								{% endfor %}
 							{% endif %}
 						</ul>

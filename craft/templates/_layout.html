@@ -46,7 +46,7 @@
 		{% for stockists in craft.entries.find({section: 'stockists'}) %}
 								{% if stockists.shop | length %}
 								{% for shop in stockists.shop %}
-								['{{ shop.shopLocation }}', {{ shop.mapLocation }}],
+								['{{ shop.shopLocation }}', {{ shop.mapLocation }}, '<h3>{{ shop.shopName }}</h3>', '{{ shop.shopLocation }}'],
 								{% endfor %}
 								{% endif %}
 						{% endfor %}
@@ -54,16 +54,6 @@
 		];
 
 		
-		var contentInfo = 
-
-								{% for stockists in craft.entries.find({section: 'stockists'}) %}
-								{% if stockists.shop | length %}
-								{% for shop in stockists.shop %}
-								"<div><h3>{{ shop.shopName }}</h3><p>{{ shop.shopLocation }}</p></br></div>";
-
-								{% endfor %}
-								{% endif %}
-						{% endfor %}
 
 	</script>
 

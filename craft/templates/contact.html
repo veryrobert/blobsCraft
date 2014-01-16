@@ -17,7 +17,7 @@
 
 								{% for info in entry.contactInfo %}
 									<div class="text">
-										<p>For more information, sales or PR please contact Blaithin <br><a href=mailto:"{{ link.url }}">{{ info.email }}</a><br><a href="tel:{{ link.url }}">{{ info.phone }}</a></p>
+										<p>For more information, sales or PR please contact Blaithin <br><a href=mailto:"{{ info.email }}">{{ info.email }}</a><br><a href="tel:{{ info.phone }}">{{ info.phone }}</a></p>
 									</div>
 								{% endfor %}
 
