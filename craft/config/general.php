@@ -28,14 +28,5 @@ return array(
         	'siteUrl' => 'http://new.blaithinennis.com/',
         	'basePath' => '/home/smongey/webapps/blaithinennis/public/'
         )
-    ),
-    'blaithinennis.com' => array(
-        'cooldownDuration' => 0,
-
-          'environmentVariables' => array(
-        	'siteUrl' => 'http://blaithinennis.com/',
-        	'basePath' => '/home/smongey/webapps/blaithinennis/public/'
-        )
- 
     )
 );

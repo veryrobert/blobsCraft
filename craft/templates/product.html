@@ -3,20 +3,22 @@
 
 {% block page %}
 
-	<div class="product">
-		
 		<div id="product">
-				<div class="left">
+			<div class="left">
+					{% set tags = ['Topaz', 'Karelain'] %}
 					<ul>
-						<li><a href="#" class="active">All</a></li>
-						<li><a href="#">Topaz</a></li>
-						<li><a href="#">Karelian</a></li>
+
+							 <li><a data-pjax=""  href="/shop">All</a></li>
+					    {% for tag in tags %}
+					        <li><a data-pjax=""  href="/{{ tag }}">{{ tag }}</a></li>
+					    {% endfor %}
 					</ul>
 				</div>
 			</div>
 
-			
 
+	<div class="product">
+		
 			<div id="single">
 				<div class="left">
 					<div id='product-single' class="swipe" >

@@ -1,53 +1,51 @@
-
+					
 {% extends "_layout" %}
-
 {% block page %}
 
-	<div class="shop">
-		
-		<div id="shop">
+			<div id="shop">
 				<div class="left">
+					{% set tags = ['Topaz', 'Karelain'] %}
 					<ul>
-						<li><a href="#" class="active">All</a></li>
-						<li><a href="#">Topaz</a></li>
-						<li><a href="#">Karelian</a></li>
+
+							 <li><a data-pjax=""  href="/shop">All</a></li>
+					    {% for tag in tags %}
+					        <li><a data-pjax=""  href="/{{ tag }}">{{ tag }}</a></li>
+					    {% endfor %}
 					</ul>
 				</div>
 			</div>
 
+	<div class="shop">
 			<div id="listing">
 				<div class="three">
-
 					{% for items in craft.entries.find({section: 'shop'}) %}
-					
 					<div class="item">
 						<a data-pjax href="{{ items.url }}">
-
 							{% for image in items.productThumbnail %}
 							<img src="{{ image.getUrl('shopThumbnail') }}" alt="Product Image">
 							{% endfor %}
-
 						</a>
 						<li>{{ items.title }}</li>
 						<li>{{ items.collectionName }}</li>
 						<li>&#8364;{{ items.price }}</li>
 
-						<p>	
-
-
+						
 					</div>
-
 					{% endfor %}
 
 				</div>				
 			</div> 
-
 		</div>
-
-
-			
-
-
 {% endblock %}
 
+
+
+
+
+
+
+
+
+				
+	
 
