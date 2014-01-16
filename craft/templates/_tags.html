@@ -1,0 +1,10 @@
+				<div class="left">
+					{% set tags = ['topaz', 'karelain'] %}
+					<ul>
+
+							 <li><a data-pjax=""  href="/shop">All</a></li>
+					    {% for tag in tags %}
+					        <li><a class="tags" data-pjax=""  href="/{{ tag }}">{{ tag }}</a></li>
+					    {% endfor %}
+					</ul>
+				</div>

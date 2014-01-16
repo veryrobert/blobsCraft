@@ -38,3 +38,9 @@ height: 16px;
 width: 16px;
 
 }
+
+a.tags {
+
+	text-transform: capitalize;
+
+}

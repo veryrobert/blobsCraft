@@ -2,18 +2,11 @@
 {% block page %}
 
 
-	<div id="shop">
-				<div class="left">
-					{% set tags = ['Topaz', 'Karelain'] %}
-					<ul>
+		<div id="shop">
+			
+				{% include '_tags.html' %}
 
-							 <li><a data-pjax=""  href="/shop">All</a></li>
-					    {% for tag in tags %}
-					        <li><a data-pjax=""  href="/{{ tag }}">{{ tag }}</a></li>
-					    {% endfor %}
-					</ul>
-				</div>
-			</div>
+		</div>
 
 
 <div class="shop">
