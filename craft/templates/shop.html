@@ -2,11 +2,12 @@
 {% extends "_layout" %}
 {% block page %}
 
+	<div class="shop">
+
 		<div id="shop">
 				{% include '_tags.html' %}
 		</div>
 
-	<div class="shop">
 			<div id="listing">
 				<div class="three">
 					{% for items in craft.entries.find({section: 'shop'}) %}
