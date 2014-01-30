@@ -43,18 +43,19 @@
 			</div>
 
 			<div id="contact">
-				{% if entry.contactInfo | length %}
+	
 					<div class="left">
 							<h2>Contact</h2>
 						</div>
 						<div class="right">
-							{% for info in entry.contactInfo %}
+							
 								<div class="text">
-									<p>For information, sales or PR please contact Blaithin at <br><a href=mailto:"">{{ info.email }}</a><br><a href="tel:">{{ info.phone }}</a></p>
+									{{ entry.infoText }}
+									<p><a href="mailto:{{ entry.blobsEmail }}">{{ entry.blobsEmail }}</a><br><a href="tel:{{ entry.blobsNumber }}">{{ entry.blobsNumber }}</a></p>
 								</div>
-							{% endfor %}
+							
 						</div>
-				{% endif %}
+			
 			</div>
 			
 	</div>

@@ -13,15 +13,19 @@
 
 							<h3>{{ entry.pageIntro }}</h3>
 
-							{% if entry.contactInfo | length %}
+							
 
-								{% for info in entry.contactInfo %}
+								
 									<div class="text">
-										<p>For more information, sales or PR please contact Blaithin <br><a href=mailto:"{{ info.email }}">{{ info.email }}</a><br><a href="tel:{{ info.phone }}">{{ info.phone }}</a></p>
+										<h4 style="padding-bottom: 12px;">Bláithín Ennis</h4>
+										<p><a href=mailto:"{{ entry.blobsEmail }}">{{ entry.blobsEmail }}</a><br><a href="tel:{{ entry.blobsNumber }}">{{ entry.blobsNumber }}</a></p>
+										{{ entry.infoText }}
+										<p>{{ entry.assistantsName }}<br>{{ entry.orderEmail }}<br>{{ entry.orderNumber }}</p>
+										<p>Our office hours 9.30–6pm Monday : Saturday</p>
 									</div>
-								{% endfor %}
+								
 
-							{% endif %}
+							
 						</div>
 			
 			</div>

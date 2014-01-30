@@ -14,8 +14,7 @@
 		<div class="three">
 			{% for items in craft.entries.find({section: 'shop'}) %}
 
-				{% set tags = ['topaz', 'karelain'] %}
-
+				{% set tags = ['topaz', 'karelian'] %}
 
 				{% for tagTitle in items.collectionTag %}
 						
@@ -32,7 +31,6 @@
 									<li>&#8364;{{ items.price }}</li>
 										
 								</div>
-
 
 						{% endif %}
 
